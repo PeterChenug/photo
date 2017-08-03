@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>iPhoto</title>
+    <script type="text/javascript">
+        var ua = navigator.userAgent
+        var wechatInfo = ua.match(/MicroMessenger\/([\d\.]+)/i)
+        var isAndroid = ua.indexOf('Android') > -1
+        var version = ua.substr(ua.indexOf('Android') + 8, 3)
+        if ((isAndroid && version < '5.0') || (wechatInfo && wechatInfo[1] < '6.5')) {
+            window.location.href = '/sorry/'
+        }
+    </script>
+</head>
+<body>
+    <div id="v-spinner">
+        <style type="text/css">
+            .v-spinner {
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                background: url("data:image/gif;base64,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") no-repeat center;
+                background-size: 40px 40px;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 999;
+                background-color: #fff;
+            }
+        </style>
+        <div class="v-spinner"></div>
+    </div>
+    <div id="app"></div>
+</body>
+</html>

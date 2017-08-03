@@ -1,0 +1,197 @@
+.banner-holder {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70px 17px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 35.73333%;
+    position: relative;
+    &[lazy="loaded"] {
+        background-size: cover;
+    }
+}
+.banner-holder__tip {
+    position: relative;
+    background: #ffffff;
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    padding: 8px 32px;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: url("../images/tip_close.png") no-repeat center;
+        background-size: 11px 11px;
+        right: 0;
+        top: 0px;
+    }
+}
+.banner-holder__tip__content {
+    text-align: center;
+    color: #666666;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    a {
+        display: inline-block;
+        padding: 0 10px;
+        height: 100%;
+        color: #00b459;
+        font-size: 13px;
+        border: 1px solid #00b459;
+        border-radius: 100px;
+        margin-left: 5px;
+    }
+
+}
+.bar {
+    background: #111;
+    padding: 0 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.bar__item {
+  display: inline-block;
+  li {
+      height: 38px;
+      line-height: 38px;
+      float: left;
+      padding: 0 15px;
+      position: relative;
+      &:after {
+          content: '';
+          position: absolute;
+          left: 15px;
+          right: 15px;
+          height: 3px;
+          bottom: 0;
+          background-image: radial-gradient(27% 98%, #00D058 0%, #00C3AA 100%);
+          border-radius: 100px;
+          transform: scaleX(0);
+      }
+      &.active {
+          &:after {
+              transform: scaleX(1);
+              transition: transform ease-in-out .5s;
+          }
+          a {
+              color: #ffffff;
+              font-weight: bold;
+          }
+      }
+      a {
+          font-size: 15px;
+          color: rgba(255,255,255,0.6);
+      }
+
+      &.locker {
+          background: url("../images/locker_white.png") no-repeat center;
+          background-size: 15px;
+          transform: rotate(0deg);
+          transition: transform .2s ease-out;
+          &.active {
+              transform: rotate(90deg);
+          }
+      }
+      &.mode_night {
+          background: url("../images/sun.png") no-repeat center;
+          background-size: 15px;
+          min-width: 35px;
+      }
+  }
+}
+.home__holder {
+    padding-top: 35.73%;
+}
+
+.home-grid__hot, .home-grid__all {
+
+}
+.home-grid__all {
+    &.active {
+        opacity: 1;
+    }
+}
+
+.home-grid__hot {
+    &.active {
+        opacity: 1;
+    }
+}
+
+.home-print__fixed {
+    display: block;
+    width: 51px;
+    height: 51px;
+    position: fixed;
+    z-index: 999;
+    right: 12px;
+    bottom: 69px;
+    border-radius: 50%;
+    background: transparent url("../images/print_fix.png") no-repeat center;
+    background-size: 100% 100%;
+    &.active {
+        &:before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #F02B2B;
+            right: 5px;
+            top: 5px;
+        }
+    }
+}
+.home__blank__container {
+    text-align: center;
+    padding-top: 135px;
+}
+.home__blank {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 200;
+    -webkit-font-smoothing: antialiased;
+    &:before, &:after{
+        content: '';
+        position: absolute;
+        width: 34px;
+        height: 4px;
+        top: 50%;
+        margin-top: -2px;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &:before {
+        background-image: url("../images/home_blank_left.png");
+        left: -34px;
+    }
+    &:after {
+        right: -34px;
+        background-image: url("../images/home_blank_right.png");
+    }
+}
+
+.banner-holder__alert {
+    text-align: left;
+    img {
+        width: 175px;
+        height: 175px;
+        margin: 0 auto;
+        display: block;
+    }
+    p {
+        color: #666666;
+        font-size: 15px;
+        line-height: 38/30;
+        margin-top: 20px;
+    }
+}

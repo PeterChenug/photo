@@ -1,0 +1,34 @@
+.button {
+    height: 44px;
+    line-height: 44px;
+    font-size: 17px;
+    color: #ffffff;
+    border-radius: 1px;
+    border: none;
+    padding: 0 36px;
+    margin: 0 auto;
+    &.button-primary {
+        background-color: #00b459;
+    }
+    &.button-default {
+        background-color: #ffffff;
+        color: #00b459;
+        &.disabled {
+            background-color: rgba(204, 204, 204, 0.96);
+            color: #ffffff;
+        }
+    }
+    &.button-block {
+        border: 1px solid #bbbbbb;
+        background-color: #ffffff;
+        color: rgba(0, 0,0,0.4);
+    }
+}
+
+.button-primary__camera {
+    display: inline-block;
+    background: url("../images/search_camera.png") no-repeat left center;
+    background-size: 17px;
+    text-indent: 22px;
+    color: #ffffff;
+}
